@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const slides = [
   {
-    title: "📚 Understanding Journal Rankings",
+    title: "Understanding Journal Rankings",
     subtitle: "SNIP & SJR Made Simple!",
-    description: "How do we measure a journal's importance? 🤔",
+    description: "How do we measure a journal's importance?",
     presenter: "Shivam Maheshwari • Ritik Kumar",
     mentor: "Dr. Vikas Sharma"
   },
