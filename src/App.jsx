@@ -67,6 +67,36 @@ const slides = [
     ],
     conclusion: "The Math journal (SNIP = 3.0) has higher relative impact than the Biology journal (SNIP = 2.0)!"
   },
+  
+  {
+    title: "👑 What is SJR?",
+    subtitle: "(SCImago Journal Rank)",
+    sections: [
+      {
+        title: "Think of it like... 🎭",
+        points: [
+          "A popularity contest 🌟",
+          "But with VIP votes!",
+          "Like getting likes from celebrities 📱",
+          "More valuable than regular likes"
+        ]
+      },
+      {
+        title: "How it Works 🎮",
+        points: [
+          "Citations are like votes",
+          "Famous journal's vote = More points",
+          "Like a game of tag with bonus points! 🎯",
+          "More prestige = More influence"
+        ]
+      }
+    ],
+    formula: {
+      title: "The Cool Formula 🎨",
+      text: "SJR = Prestige Points × Citation Power"
+    }
+  },
+
   {
     title: "🎮 Let's Play with SJR!",
     subtitle: "Mathematical Examples",
@@ -100,34 +130,7 @@ const slides = [
     ],
     conclusion: "Journal A has higher SJR despite fewer citations due to prestigious sources!"
   },
-  {
-    title: "👑 What is SJR?",
-    subtitle: "(SCImago Journal Rank)",
-    sections: [
-      {
-        title: "Think of it like... 🎭",
-        points: [
-          "A popularity contest 🌟",
-          "But with VIP votes!",
-          "Like getting likes from celebrities 📱",
-          "More valuable than regular likes"
-        ]
-      },
-      {
-        title: "How it Works 🎮",
-        points: [
-          "Citations are like votes",
-          "Famous journal's vote = More points",
-          "Like a game of tag with bonus points! 🎯",
-          "More prestige = More influence"
-        ]
-      }
-    ],
-    formula: {
-      title: "The Cool Formula 🎨",
-      text: "SJR = Prestige Points × Citation Power"
-    }
-  },
+  
   {
     title: "🤝 SNIP vs SJR: Friends Not Rivals!",
     sections: [
