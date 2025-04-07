@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const slides = [
   {
-    title: "Understanding Journal Rankings",
+    title: "📚 Understanding Journal Rankings",
     subtitle: "SNIP & SJR Made Simple!",
-    description: "How do we measure a journal's importance?",
+    description: "How do we measure a journal's importance? 🤔",
     presenter: "Shivam Maheshwari • Ritik Kumar",
     mentor: "Dr. Vikas Sharma"
   },
@@ -36,71 +36,70 @@ const slides = [
       text: "SNIP = Citations ÷ Expected Citations in Field"
     }
   },
-{
-  title: "🎮 Let's Play with SNIP!",
-  subtitle: "Mathematical Examples",
-  examples: [
-    {
-      title: "📐 Math Journal Example",
-      calculation: [
-        "Given:",
-        "• Actual Citations = 30",
-        "• Expected Citations = 10",
-        "",
-        "SNIP = 30 ÷ 10 = 3.0",
-        "",
-        "This means the journal has 3x more impact than expected!"
-      ]
-    },
-    {
-      title: "🧬 Biology Journal Example",
-      calculation: [
-        "Given:",
-        "• Actual Citations = 100",
-        "• Expected Citations = 50",
-        "",
-        "SNIP = 100 ÷ 50 = 2.0",
-        "",
-        "This shows 2x more impact than expected!"
-      ]
-    }
-  ],
-  conclusion: "The Math journal (SNIP = 3.0) has higher relative impact than the Biology journal (SNIP = 2.0)!"
-},
-{
-  title: "🎮 Let's Play with SJR!",
-  subtitle: "Mathematical Examples",
-  examples: [
-    {
-      title: "📊 Journal A Example",
-      calculation: [
-        "Given:",
-        "• Base Citations = 100",
-        "• Citing Journal's Prestige = 1.5",
-        "",
-        "Weighted Citations = 100 × 1.5 = 150",
-        "SJR Score = 150 ÷ Total Articles = 3.75",
-        "",
-        "High prestige citations boost the score!"
-      ]
-    },
-    {
-      title: "📈 Journal B Example",
-      calculation: [
-        "Given:",
-        "• Base Citations = 150",
-        "• Citing Journal's Prestige = 1.0",
-        "",
-        "Weighted Citations = 150 × 1.0 = 150",
-        "SJR Score = 150 ÷ Total Articles = 3.0",
-        "",
-        "More citations but lower prestige impact!"
-      ]
-    }
-  ],
-  conclusion: "Journal A has higher SJR despite fewer citations due to prestigious sources!"
-},
-
+  {
+    title: "🎮 Let's Play with SNIP!",
+    subtitle: "Mathematical Examples",
+    examples: [
+      {
+        title: "📐 Math Journal Example",
+        calculation: [
+          "Given:",
+          "• Actual Citations = 30",
+          "• Expected Citations = 10",
+          "",
+          "SNIP = 30 ÷ 10 = 3.0",
+          "",
+          "This means the journal has 3x more impact than expected!"
+        ]
+      },
+      {
+        title: "🧬 Biology Journal Example",
+        calculation: [
+          "Given:",
+          "• Actual Citations = 100",
+          "• Expected Citations = 50",
+          "",
+          "SNIP = 100 ÷ 50 = 2.0",
+          "",
+          "This shows 2x more impact than expected!"
+        ]
+      }
+    ],
+    conclusion: "The Math journal (SNIP = 3.0) has higher relative impact than the Biology journal (SNIP = 2.0)!"
+  },
+  {
+    title: "🎮 Let's Play with SJR!",
+    subtitle: "Mathematical Examples",
+    examples: [
+      {
+        title: "📊 Journal A Example",
+        calculation: [
+          "Given:",
+          "• Base Citations = 100",
+          "• Citing Journal's Prestige = 1.5",
+          "",
+          "Weighted Citations = 100 × 1.5 = 150",
+          "SJR Score = 150 ÷ Total Articles = 3.75",
+          "",
+          "High prestige citations boost the score!"
+        ]
+      },
+      {
+        title: "📈 Journal B Example",
+        calculation: [
+          "Given:",
+          "• Base Citations = 150",
+          "• Citing Journal's Prestige = 1.0",
+          "",
+          "Weighted Citations = 150 × 1.0 = 150",
+          "SJR Score = 150 ÷ Total Articles = 3.0",
+          "",
+          "More citations but lower prestige impact!"
+        ]
+      }
+    ],
+    conclusion: "Journal A has higher SJR despite fewer citations due to prestigious sources!"
+  },
   {
     title: "👑 What is SJR?",
     subtitle: "(SCImago Journal Rank)",
@@ -247,6 +246,20 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
 
+  const renderMathExample = (example) => (
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      className="p-8 bg-white rounded-2xl shadow-xl"
+    >
+      <h3 className="text-3xl mb-6 text-gray-800">{example.title}</h3>
+      <pre className="text-lg text-gray-700 font-mono whitespace-pre-wrap">
+        {example.calculation.join('\n')}
+      </pre>
+    </motion.div>
+  );
+
   const renderSlideContent = (slide) => {
     if (currentSlide === 0) {
       return (
@@ -291,6 +304,50 @@ function App() {
             Under the guidance of<br />
             <span className="text-green-600 text-2xl">{slide.mentor}</span>
           </motion.div>
+        </div>
+      );
+    }
+
+    if (slide.examples) {
+      return (
+        <div className="h-full flex flex-col items-center justify-center p-8">
+          <motion.h1
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="text-6xl font-bold text-center mb-6 text-gray-800"
+          >
+            {slide.title}
+          </motion.h1>
+          <motion.h2
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-4xl text-center mb-12 text-gray-700"
+          >
+            {slide.subtitle}
+          </motion.h2>
+          <div className="grid grid-cols-2 gap-8 w-full max-w-7xl">
+            {slide.examples.map((example, index) => (
+              <motion.div
+                key={index}
+                initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.3 * (index + 1) }}
+              >
+                {renderMathExample(example)}
+              </motion.div>
+            ))}
+          </div>
+          {slide.conclusion && (
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.2 }}
+              className="mt-12 text-center p-8 bg-white rounded-2xl shadow-xl w-full max-w-3xl"
+            >
+              <p className="text-2xl text-blue-600">{slide.conclusion}</p>
+            </motion.div>
+          )}
         </div>
       );
     }
@@ -442,6 +499,20 @@ function App() {
           {renderSlideContent(slides[currentSlide])}
         </motion.div>
       </AnimatePresence>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              setDirection(index > currentSlide ? 1 : -1);
+              setCurrentSlide(index);
+            }}
+            className={`w-3 h-3 rounded-full ${
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
