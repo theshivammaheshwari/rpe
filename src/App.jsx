@@ -109,6 +109,7 @@ const slides = [
           "• Citing Journal's Prestige = 1.5",
           "",
           "Weighted Citations = 100 × 1.5 = 150",
+          "Total Articles = 40",
           "SJR Score = 150 ÷ Total Articles = 3.75",
           "",
           "High prestige citations boost the score!"
@@ -122,6 +123,7 @@ const slides = [
           "• Citing Journal's Prestige = 1.0",
           "",
           "Weighted Citations = 150 × 1.0 = 150",
+          "Total Articles = 30",
           "SJR Score = 150 ÷ Total Articles = 3.0",
           "",
           "More citations but lower prestige impact!"
@@ -130,7 +132,7 @@ const slides = [
     ],
     conclusion: "Journal A has higher SJR despite fewer citations due to prestigious sources!"
   },
-  
+
   {
     title: "🤝 SNIP vs SJR: Friends Not Rivals!",
     sections: [
