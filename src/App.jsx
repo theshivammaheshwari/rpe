@@ -36,30 +36,71 @@ const slides = [
       text: "SNIP = Citations ÷ Expected Citations in Field"
     }
   },
-  {
-    title: "🎮 Let's Play with SNIP!",
-    examples: [
-      {
-        title: "📐 Math Journal",
-        points: [
-          "Got 30 citations 📚",
-          "Field usually gets ~10 citations",
-          "SNIP = 30 ÷ 10 = 3.0",
-          "That's amazing! 🌟"
-        ]
-      },
-      {
-        title: "🧬 Biology Journal",
-        points: [
-          "Got 100 citations 📚",
-          "Field usually gets ~50 citations",
-          "SNIP = 100 ÷ 50 = 2.0",
-          "Pretty good too! 🌟"
-        ]
-      }
-    ],
-    conclusion: "Even though Biology has more citations, Math journal has higher impact in its field!"
-  },
+{
+  title: "🎮 Let's Play with SNIP!",
+  subtitle: "Mathematical Examples",
+  examples: [
+    {
+      title: "📐 Math Journal Example",
+      calculation: [
+        "Given:",
+        "• Actual Citations = 30",
+        "• Expected Citations = 10",
+        "",
+        "SNIP = 30 ÷ 10 = 3.0",
+        "",
+        "This means the journal has 3x more impact than expected!"
+      ]
+    },
+    {
+      title: "🧬 Biology Journal Example",
+      calculation: [
+        "Given:",
+        "• Actual Citations = 100",
+        "• Expected Citations = 50",
+        "",
+        "SNIP = 100 ÷ 50 = 2.0",
+        "",
+        "This shows 2x more impact than expected!"
+      ]
+    }
+  ],
+  conclusion: "The Math journal (SNIP = 3.0) has higher relative impact than the Biology journal (SNIP = 2.0)!"
+},
+{
+  title: "🎮 Let's Play with SJR!",
+  subtitle: "Mathematical Examples",
+  examples: [
+    {
+      title: "📊 Journal A Example",
+      calculation: [
+        "Given:",
+        "• Base Citations = 100",
+        "• Citing Journal's Prestige = 1.5",
+        "",
+        "Weighted Citations = 100 × 1.5 = 150",
+        "SJR Score = 150 ÷ Total Articles = 3.75",
+        "",
+        "High prestige citations boost the score!"
+      ]
+    },
+    {
+      title: "📈 Journal B Example",
+      calculation: [
+        "Given:",
+        "• Base Citations = 150",
+        "• Citing Journal's Prestige = 1.0",
+        "",
+        "Weighted Citations = 150 × 1.0 = 150",
+        "SJR Score = 150 ÷ Total Articles = 3.0",
+        "",
+        "More citations but lower prestige impact!"
+      ]
+    }
+  ],
+  conclusion: "Journal A has higher SJR despite fewer citations due to prestigious sources!"
+},
+
   {
     title: "👑 What is SJR?",
     subtitle: "(SCImago Journal Rank)",
