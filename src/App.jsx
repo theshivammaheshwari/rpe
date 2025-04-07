@@ -9,34 +9,7 @@ const slides = [
     presenter: "• Shivam Maheshwari 24PCS001 • Ritik Kumar 24PPH002",
     mentor: "Dr. Vikas Sharma"
   },
-  {
-    title: "What Are Journal Metrics? 📊",
-    content: [
-      {
-        emoji: "📚",
-        text: "Research metrics are tools used to measure the quality, impact, or importance of research work — such as research papers, journals, or even authors."
-      },
-      {
-        emoji: "🔍",
-        text: "Not all journals are of the same quality. Some are highly prestigious, some are average, and some may be fake or of low quality."
-      },
-      {
-        emoji: "🧩",
-        text: "SJR and SNIP help in judging how good or reliable a journal is."
-      },
-      {
-        emoji: "🌟",
-        text: "Example: If a journal has high SJR and SNIP values, it means researchers trust it and cite its papers more often."
-      },
-      {
-        emoji: "📝",
-        text: "When writing a research paper, choosing the right journal is important."
-      }
-    ],
-    examples: "Think about how your teacher gives you gold stars ⭐ for good work. SNIP and SJR are like special gold stars for science papers!",
-    hasAnimation: true,
-    animationType: "fade"
-  },
+  
   {
     title: "🎯 What is SNIP?",
     subtitle: "(Source Normalized Impact per Paper)",
