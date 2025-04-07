@@ -93,7 +93,7 @@ const slides = [
     ],
     formula: {
       title: "The Cool Formula 🎨",
-      text: "SJR = Prestige Points × Citation Power"
+      text: "SJR = (Σ Citations × Prestige of Source Journals) ÷ Total Published Articles"
     }
   },
 
